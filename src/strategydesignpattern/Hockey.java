@@ -3,7 +3,11 @@ package strategydesignpattern;
 public class Hockey {
 
     public Hockey() {}
-
+    
+    /*
+    Iterates through players and assigns different name values.
+    Outputs the Players, Offencive Plays, Defensive Plays.
+     */
     public void play() {
         Player[] players = new Player[3];
         players[0] = new Forward("John Tavares");
@@ -34,7 +38,9 @@ public class Hockey {
             System.out.println(player.name + " " + player.play());
         }
     }
-
+    /*
+    calls the turnover method in Player class, which sets offence to False
+     */
     private void turnover(Player[] players) {
         for(Player player : players) {
             player.turnover();
